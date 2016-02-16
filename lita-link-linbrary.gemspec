@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
   spec.description   = %q{A Lita handler that allows you manage a link library.}
   spec.summary       = %q{A Lita handler that allows you manage a link library.}
   spec.homepage      = "https://github.com/sijiton/lita-link-library"
-  spec.license       = "MIT"
+  spec.license       = "[MIT]"
   spec.metadata      = { "lita_plugin_type" => "handler" }
 
   spec.files         = `git ls-files`.split($/)
