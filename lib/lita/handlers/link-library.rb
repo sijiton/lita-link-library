@@ -46,7 +46,7 @@ module Lita
         command: true,
         restrict_to: :link_library_admins, 
         help: {'add read LINK TITLE DESCRIPTION' => 'Adds a new entry in thelita link library '+ 
-        'with that LINK TITLE and DESCRIPTION attributes.'}
+        'with that LINK, TITLE and DESCRIPTION attributes.'}
       )
       route(
         /^(remove read)\s#{TITLE.source}$/i, 
