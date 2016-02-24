@@ -1,5 +1,6 @@
 A Lita handler that allows you manage a JSON link library.
 
+
 List of commands:
 
 'random read' => 'Returns a random entry from the lita link library.'
