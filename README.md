@@ -1,5 +1,6 @@
 ###A Lita handler that allows you manage a JSON link library.
 
+[![Gem Version](https://badge.fury.io/rb/lita-link-library.svg)](https://badge.fury.io/rb/lita-link-library)
 
 ####List of commands:
 
