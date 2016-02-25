@@ -8,7 +8,7 @@ module Lita
     class LinkLibrary < Handler
       
       TITLE = /[\w\s\,\.\-\/:–]+/
-      LINK = /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/
+      LINK = /(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?/
       DESCRIPTION = /[\w\s\,\.\-\/:–]+/
       
       route(
@@ -33,14 +33,14 @@ module Lita
       )
       
       route(
-        /^(want to read)\s#{TITLE.source}$/i, 
+        /^(?:want to read)\s(#{TITLE.source})$/i, 
         :want_to_read_command, 
         command: true, 
         help: {'want to read TITLE' => 'Returns the entry from lita link library with that TITLE.'}
       ) 
         
       route(
-        /^(add read)\s#{LINK.source}\s#{TITLE.source}\s#{DESCRIPTION.source}$/i, 
+        /^(?:add read)\s(#{LINK.source})\s(#{TITLE.source})\s(#{DESCRIPTION.source})$/i, 
         :add_read_command, 
         command: true,
         restrict_to: :link_library_admins, 
@@ -48,7 +48,7 @@ module Lita
         'with that LINK, TITLE and DESCRIPTION attributes.'}
       )
       route(
-        /^(remove read)\s#{TITLE.source}$/i, 
+        /^(remove read)\s(#{TITLE.source})$/i, 
         :remove_read_command, 
         command: true, 
         restrict_to: :link_library_admins,
@@ -69,17 +69,19 @@ module Lita
       end
       
       def want_to_read_command(response)
-        title = response.matches.first[1]
+        title = response.matches.first[0]
         response.reply read_entry(title)
       end
       
       def add_read_command(response)
-        link, title, description = response.matches.first
+        link = response.matches.first[0]
+        title = response.matches.first[5]
+        description = response.matches.first[6]
         response.reply save_new_entry(link, title, description)
       end
       
       def remove_read_command(response)
-        title = response.matches.first[1]
+        title = response.matches.first[0]
         response.reply delete_entry(title)
       end
       
