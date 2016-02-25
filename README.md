@@ -27,3 +27,7 @@
 
 - `remove read TITLE` => Removes the entry with that TITLE from the lita link library.
 
+
+#### License
+
+[MIT](http://opensource.org/licenses/MIT)
