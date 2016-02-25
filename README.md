@@ -7,23 +7,23 @@
 
 - `give me a gooder` => Returns top 3 entries from the lita link library.
 
-- `list library` => Returns entire lita link library.
+- `list library` => Returns the entire lita link library.
 
-- `want to read TITLE` => Returns the entry from lita link library with that TITLE.
+- `want to read TITLE` => Returns the entry with that TITLE from the lita link library.
 
 
 ######The link library itself can be managed by an authorized group of admins. This group is managed by a user defined via the `config.robot.admins` configuration attribute.
 
-- `Lita auth add USER link_library_admins` => Adds USER as a library admin.
+- `Lita auth add USER link_library_admins` => Adds USER as a link library admin.
 
-- `Lita auth remove USER link_library_admins` => Removes USER from the library admins group.
+- `Lita auth remove USER link_library_admins` => Removes USER from the link library admins group.
 
 - `Lita auth list` => Displays all the current authorization groups and their members.
 
 
 ####Commands restricted to library admins:
 
-- `add read LINK TITLE DESCRIPTION` => Adds a new entry in thelita link library with that LINK, TITLE and DESCRIPTION attributes.
+- `add read LINK TITLE DESCRIPTION` => Adds a new entry with that LINK, TITLE and DESCRIPTION attributes in the lita link library.
 
-- `remove read TITLE` => Removes the entry from lita link library with that TITLE.
+- `remove read TITLE` => Removes the entry with that TITLE from the lita link library.
 
