@@ -1,4 +1,4 @@
-##A Lita handler that allows you manage a JSON link library.
+###A Lita handler that allows you manage a JSON link library.
 
 
 ####List of commands:
