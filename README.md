@@ -24,7 +24,7 @@
 
 ####Commands restricted to library admins:
 
-- `add read LINK TITLE DESCRIPTION` => Adds a new entry with that LINK, TITLE and DESCRIPTION attributes in the lita link library.
+- `add read LINK|TITLE|DESCRIPTION` => Adds a new entry with that LINK, TITLE and DESCRIPTION attributes in the lita link library. Please use the <|>pipe<|> character as a delimiter! 
 
 - `remove read TITLE` => Removes the entry with that TITLE from the lita link library.
 
